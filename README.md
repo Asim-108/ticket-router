@@ -64,10 +64,17 @@ pip install -r requirements.txt
    ```bash
    cp .env.example .env
    ```
-2. Open the new `.env` file and insert your OpenRouter API Key:
+2. Open the new `.env` file and insert your credentials and configuration:
    ```env
+   # Your OpenRouter or OpenAI API Key
    OPENAI_API_KEY=your_openrouter_api_key_here
+
+   # The model to run classification on (defaults to openai/gpt-4o-mini)
+   MODEL_NAME=openai/gpt-4o-mini
    ```
+
+   > [!TIP]
+   > You can change `MODEL_NAME` to any model offered by OpenRouter (e.g., `google/gemini-2.5-flash`, `anthropic/claude-3.5-haiku`, or `meta-llama/llama-3.3-70b-instruct`). Ensure the model you choose supports Structured Outputs (JSON Schema parsing) for best results. Refer to the comments in `[.env.example](file:///c:/Users/Asimr/3D%20Objects/Projects/ticket-router/.env.example)` for details.
 
 ---
 
